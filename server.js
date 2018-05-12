@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var session    = require('express-session');
 var app        = express();
 
-mongoose.connect('mongodb://localhost/database');
+mongoose.connect('mongodb://whitepages:ahmed@ds139138.mlab.com:39138/data');
 var contact = mongoose.Schema({
     name:String,
     number:Number,
