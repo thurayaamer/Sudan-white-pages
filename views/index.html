@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>SUDAN WHITE PAGE</title>
+
+        
+        <script src="/scripts/angular.min.js"></script>
+        <script src="/scripts/angular-route.js"></script>
+        <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+        <link  rel="stylesheet" href="/bootstrap/css/bootstrap.min.css"/>   
+        <link  rel="stylesheet" href="/bootstrap/css/bootstrap-theme.min.css"/> 
+         <link  rel="stylesheet" href="https://bootswatch.com/3/readable/bootstrap.min.css"/> 
+         <style TYPE="text/css">
+
+            body{
+            
+            background: Arial;
+            font-size: 16px;
+            
+            background-image:url('/images/Hydrangeas.jpg');
+            background-size: cover;
+            
+            background-repeat: no-repeat;
+            
+            }
+        </style>
+
+    </head>
+<body ng-app="main">
+    <nav class="navbar navbar-default">
+        <div class="container">            
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="#/!">home</a>
+            </div>            
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">  
+                    <li><a href="#!insert"> add new contact</a></li> 
+                    <li ng-hide="auth"><a href="#!signup">REGISTERING</a></li>                                  
+                    <li ng-hide="auth"><a href="#!signin">LOG IN</a></li>                                  
+                    <li ng-show="auth"><a href="#!signout" ng-click="signout()">LOG OUT</a></li>                                  
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row" ng-show="auth">
+            <div class="col-lg-12">            
+                <h1 class="text-danger">Hello , {{username}}</h1>
+            </div>
+        </div>
+        <div class="row" ng-hide="auth">
+            <div class="col-lg-12">            
+                <h1 class="text-success">Hello</h1>
+            </div>
+        </div>   
+
+        <div>
+            <div ng-view></div>
+             
+        </div>
+
+    </div>  
+
+</div>
+ 
+                   
+<script type="text/javascript" src="/scripts/controller.js"></script>
+</body>
+</html>

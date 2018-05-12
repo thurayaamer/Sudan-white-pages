@@ -1,0 +1,30 @@
+
+    <div id="list_contacts" ng-controller="control_list_contacts" class="table-responsive">
+        <div ng-bind-html="error"></div>
+        
+           
+            <table width="100%"  class="table table-bordered table-hover">
+                <tr>
+                    <!--<th ng-click="order($index)">Sno</th>-->
+                    <th class="activetd" ng-click="order('name')">Name</th>
+                    <th>Number</th>
+                    <th ng-click="order('job')">Job</th>
+                    <th ng-click="order('number')">Address</th>
+                    <th>Operatios</th>
+                </tr>
+                
+                <tr ng-repeat="x in records | orderBy :orderby  ">
+                    <!---<td><b>{{$index}}</b></td>-->
+                    <td class="activetd"><b>{{x.name}}</b></td>
+                    <td>{{x.number}}</td>
+                    <td>{{x.job}}</td>
+                    <td>{{x.address }}</td>
+                    <td>
+                            <button class="btn btn-danger" ng-click="delete(x._id,$index)">Delete</button>
+                            <a class="btn btn-success" href="#!edit/{{x._id}}/{{x.name}}/{{x.number}}/{{x.job}}/{{x.address}}">Edit</a>
+                    </td>
+                </tr>
+            
+            </table>
+      
+    </div>

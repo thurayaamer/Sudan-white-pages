@@ -1,0 +1,22 @@
+{
+  "name": "swp",
+  "version": "1.0.0",
+  "description": "swp",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "mongodb": "^3.0.7",
+    "mongoose": "^5.0.17",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "testswp",
+    "start": "node server.js"
+  },
+  "author": "sulieman",
+  "license": "ISC"
+}

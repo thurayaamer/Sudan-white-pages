@@ -1,0 +1,52 @@
+<div class="panel panel-default" ng-controller="control_add_contacts">
+ 
+    <div class="panel-body">
+    <div ng-bind-html="error"></div>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="form-group">
+                <label for="" class="control-label">userName</label>
+                <input class="form-control" type="text" ng-model="name" id="name" maxlength="100" required="required"/>
+                <input class="form-control" type="hidden" value="{id}" ng-model="id" required="required"/>
+                
+                <span  class="help-block"></span>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="form-group">
+                <label for="" class="control-label">userNumber</label>
+                <input class="form-control" type="tel" ng-model="number" id="number" maxlength="18" required="required"/>
+                
+                <span class="help-block"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="form-group">
+                <label for="" class="control-label">userJob</label>
+                <input class="form-control" type="text" ng-model="job" id="job" maxlength="50" required="required"/>
+               
+                <span class="help-block"></span>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="form-group">
+                <label for="" class="control-label">userLocation</label>
+                <input class="form-control" type="text" ng-model="address" id="location" maxlength="500" required="required"/>
+                
+                <span class="help-block"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <hr/>
+        <div class="col-lg-12">
+            <div class="btn-toolbar">
+                <button class="btn btn-primary" name="btn_edit" ng-click="add()">Send</button>                
+            </div>
+        </div>
+    </div>
+</div>    
+
+
